@@ -1,0 +1,22 @@
+{% extends 'web/header.html' %}
+
+<!-- <style >
+    div {        
+    margin-left:auto;
+    margin-right:auto;
+    }
+</style> -->
+<div class="container" >
+    {% block content %}
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button class="btn">Login</button>
+        </form>
+
+        If you don't have an account <a href="/register" target="blank"><strong>register</strong></a> instead.
+
+    {% endblock %}
+    </div>
+</div>
